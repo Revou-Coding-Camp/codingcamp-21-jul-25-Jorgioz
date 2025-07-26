@@ -1,0 +1,151 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #02091a, #3c26b9);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Container utama (kotak To-Do List) */
+.container {
+  background: linear-gradient(135deg, #4d7ea5, #0e0842);
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+/* Judul */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #e0e7ff;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+/* Form & Filter Group */
+.form, .filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input teks, tanggal, dan select */
+input[type="text"],
+input[type="date"],
+select {
+  flex: 1 1 40%;
+  padding: 10px 12px;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #334155;
+  color: white;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+input::placeholder {
+  color: #cbd5e1;
+}
+
+input:focus,
+select:focus {
+  border-color: #60a5fa;
+  background-color: #475569;
+  outline: none;
+}
+
+/* Label filter */
+.filter label {
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+/* Tombol umum */
+button {
+  padding: 10px 16px;
+  background-color: #1e79d3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5e91ff;
+}
+
+/* Tombol hapus semua */
+.delete-all {
+  background-color: #c33131;
+}
+
+.delete-all:hover {
+  background-color: #ea3d3d;
+}
+
+/* Daftar tugas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Setiap item tugas */
+li {
+  background-color: #1e293b;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-left: 5px solid #60a5fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background-color 0.2s;
+}
+
+li:hover {
+  transform: scale(1.01);
+  background-color: #273549;
+}
+
+/* Informasi tugas */
+.info {
+  flex-grow: 1;
+}
+
+/* Tanggal tugas */
+.date {
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+/* Tombol hapus pada tiap item */
+li button {
+  background-color: #ef4444;
+  font-size: 12px;
+  padding: 6px 10px;
+  margin-left: 10px;
+  border-radius: 8px;
+}
+
+li button:hover {
+  background-color: #dc2626;
+}

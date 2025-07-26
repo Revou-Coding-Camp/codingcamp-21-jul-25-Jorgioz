@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do List Elegan</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>📋 To-Do List</h1>
+
+    <div class="form">
+      <input type="text" id="todo-text" placeholder="Tulis tugas..." />
+      <input type="date" id="todo-date" />
+      <button onclick="addTodo()">Tambah</button>
+    </div>
+
+    <div class="filter">
+      <label>Filter:</label>
+      <select id="filter" onchange="renderTodos()">
+        <option value="all">Semua</option>
+        <option value="today">Hari Ini</option>
+        <option value="date">Tanggal Tertentu</option>
+      </select>
+      <input type="date" id="filter-date" onchange="renderTodos()" />
+      <button class="delete-all" onclick="deleteAllTodos()">Hapus Semua</button>
+    </div>
+
+    <ul id="todo-list"></ul>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
